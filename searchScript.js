@@ -23,7 +23,9 @@ enterBtn.addEventListener("click", () => {
       return response.json();
     })
     .then((resp) => {
-      title.innerText = resp.numFound;
+      //   debugger;
+      //   title.innerText = resp.numFound;
+      title.innerText = resp.docs[0].title;
       author.innerText = resp.docs[0].author_name;
       year.innerText = resp.docs[0].first_publish_year;
 
